@@ -319,8 +319,87 @@ footer {
 .address-hero h1 { color: white; margin: 0 0 6px; }
 .address-hero .eyebrow { color: rgba(255,255,255,0.7); }
 .address-hero .sub { color: rgba(255,255,255,0.9); }
+.compare-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin: 20px 0;
+}
+.horizon-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px 20px;
+}
+.horizon-card .horizon-label {
+  font-size: 12px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.horizon-card .compare-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.compare-side {
+  padding: 14px;
+  border-radius: 10px;
+  background: var(--bg);
+}
+.compare-side.winner {
+  background: var(--good-soft);
+  border: 1px solid var(--good);
+}
+.compare-side .side-label {
+  font-size: 12px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.compare-side .wealth {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+.compare-side .breakdown {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.compare-side .breakdown span { color: var(--ink); font-weight: 600; }
+.verdict-pill {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 100px;
+  background: var(--accent);
+  color: white;
+  margin-top: 10px;
+}
+.verdict-pill.tight { background: #6b7280; }
+.assumptions {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 22px;
+  margin: 16px 0;
+}
+.assumption-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
 @media (min-width: 600px) {
   .snapshot { grid-template-columns: repeat(3, 1fr); }
+  .assumption-grid { grid-template-columns: repeat(3, 1fr); }
 }
 @media print {
   body { background: white; }
@@ -355,10 +434,11 @@ footer {
     <li><a href="#snapshot">The house at a glance</a></li>
     <li><a href="#good-news">Why this house works for our family</a></li>
     <li><a href="#bad-news">What we should be careful about</a></li>
-    <li><a href="#price">Is the price fair?</a></li>
+    <li><a href="#price-check">Is the price fair?</a></li>
     <li><a href="#questions">Questions to ask Brett (the agent)</a></li>
     <li><a href="#mortgage">What it would actually cost us each month</a></li>
     <li><a href="#hidden">The hidden costs we shouldn't forget</a></li>
+    <li><a href="#rent-vs-buy">Rent + Invest vs Buy — the big picture for our wealth</a></li>
     <li><a href="#alternatives">Other houses worth seeing first</a></li>
     <li><a href="#decision">How we should decide</a></li>
   </ol>
@@ -428,7 +508,7 @@ footer {
   </ul>
 </div>
 
-<h2 id="price">5. Is the price fair?</h2>
+<h2 id="price-check">5. Is the price fair?</h2>
 <p>"From High $1,000,000's" in agent-speak usually means <strong>offers starting around $1.15M–$1.25M</strong>, and final price often lands higher in this market.</p>
 
 <table>
@@ -886,7 +966,84 @@ footer {
   <strong>The big lesson:</strong> The mortgage repayment is only about <strong>60–70% of the true monthly cost</strong> of owning. Most first-home buyers forget the other 30–40%. We need to plan for ~$1,000/month of ongoing house costs <em>on top of</em> the mortgage.
 </div>
 
-<h2 id="alternatives">9. Other houses worth seeing first</h2>
+<h2 id="rent-vs-buy">9. Rent + Invest vs Buy — the big picture for our wealth</h2>
+<p>This is the most important section. We aren't choosing between "house" and "no house" — we're choosing between two real wealth strategies that we already understand. Here's our actual situation:</p>
+
+<div class="snapshot" style="grid-template-columns: 1fr 1fr;">
+  <div class="snap-item"><div class="snap-label">Where we live now</div><div class="snap-value">Burns Beach (renting)</div></div>
+  <div class="snap-item"><div class="snap-label">Current rent</div><div class="snap-value">$1,000 / week</div></div>
+  <div class="snap-item"><div class="snap-label">Investment portfolio</div><div class="snap-value">~$800,000</div></div>
+  <div class="snap-item"><div class="snap-label">Monthly into Vanguard</div><div class="snap-value">$4,000</div></div>
+</div>
+
+<p><strong>What's really at stake:</strong> if we buy this house, we'd put ~<strong>$308,000</strong> of our $800k portfolio into deposit + stamp duty + costs. The rest stays invested, but the monthly amount we can <em>continue</em> investing drops from <strong>$4,000</strong> to roughly <strong>$1,000</strong> (because most of our monthly budget now goes to the mortgage and ongoing costs).</p>
+
+<div class="callout">
+  <strong>The trade-off in one line:</strong> We swap roughly <strong>$300k upfront + $3,000/month of share investing</strong> for the right to live in our own home and build equity through the mortgage.
+</div>
+
+<h3>The comparison calculator</h3>
+<p>Move any number and the results below recalculate. The defaults reflect our actual situation. The share return uses Vanguard's long-term historical average. The house growth uses a <em>realistic</em> long-term Perth number — much more conservative than Padbury's recent 12–15% (which can't continue forever).</p>
+
+<div class="assumptions">
+  <div class="assumption-grid">
+    <div>
+      <label for="cur-invest" style="display:block;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;font-weight:600;margin-bottom:4px;">Investments today ($)</label>
+      <input type="number" id="cur-invest" value="800000" step="10000" style="width:100%;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-size:16px;background:var(--bg);font-family:inherit;">
+    </div>
+    <div>
+      <label for="cur-rent" style="display:block;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;font-weight:600;margin-bottom:4px;">Weekly rent ($)</label>
+      <input type="number" id="cur-rent" value="1000" step="50" style="width:100%;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-size:16px;background:var(--bg);font-family:inherit;">
+    </div>
+    <div>
+      <label for="cur-monthly-invest" style="display:block;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;font-weight:600;margin-bottom:4px;">Monthly into shares ($)</label>
+      <input type="number" id="cur-monthly-invest" value="4000" step="100" style="width:100%;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-size:16px;background:var(--bg);font-family:inherit;">
+    </div>
+    <div>
+      <label for="share-return" style="display:block;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;font-weight:600;margin-bottom:4px;">Share return (% / year)</label>
+      <input type="number" id="share-return" value="7" step="0.5" min="0" max="15" style="width:100%;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-size:16px;background:var(--bg);font-family:inherit;">
+    </div>
+    <div>
+      <label for="house-growth" style="display:block;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;font-weight:600;margin-bottom:4px;">House growth (% / year)</label>
+      <input type="number" id="house-growth" value="5" step="0.5" min="0" max="15" style="width:100%;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-size:16px;background:var(--bg);font-family:inherit;">
+    </div>
+    <div>
+      <label for="rent-growth" style="display:block;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;font-weight:600;margin-bottom:4px;">Rent growth (% / year)</label>
+      <input type="number" id="rent-growth" value="3" step="0.5" min="0" max="10" style="width:100%;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-size:16px;background:var(--bg);font-family:inherit;">
+    </div>
+  </div>
+  <p class="note" style="font-size:12px;color:var(--muted);margin-top:14px;line-height:1.5;">
+    Note: this uses the purchase price, deposit, interest rate, and loan term from the mortgage calculator above. Both scenarios assume the same total monthly cash budget (rent + invest, or mortgage + ongoing + invest), growing with inflation. Tax effects are ignored — but remember the family home is <strong>capital gains tax free</strong> on sale, while shares are not.
+  </p>
+</div>
+
+<div class="compare-grid" id="comparison-cards">
+  <!-- Filled by JS -->
+</div>
+
+<h3>What this tells us</h3>
+<div id="key-insight" class="callout">
+  <!-- Filled by JS -->
+</div>
+
+<h3>What the math doesn't capture</h3>
+<p>These numbers tell us a lot, but they leave out things that matter just as much:</p>
+<ul class="clean">
+  <li><strong>Stability for the kids.</strong> No risk of being asked to move because the landlord is selling, no rent reviews, no inspections. Big deal when they're in school.</li>
+  <li><strong>Forced savings.</strong> Mortgage payments build equity automatically. Most people invest less than they plan to — buying removes that risk.</li>
+  <li><strong>Tax advantages of the family home.</strong> No capital gains tax when we eventually sell. Our $800k in Vanguard <em>will</em> incur CGT (with the 50% discount for &gt;12-month holdings).</li>
+  <li><strong>Concentration risk.</strong> Buying turns our diversified portfolio into one big bet on a single 369 m² block in Padbury. Shares stay diversified across thousands of companies.</li>
+  <li><strong>Liquidity.</strong> Selling shares takes 3 days. Selling a house takes 3 months and costs ~3% in agent + duty + legal fees.</li>
+  <li><strong>Flexibility.</strong> If we want to move overseas, change jobs, or relocate for the kids' education, the share portfolio comes with us. The house doesn't.</li>
+  <li><strong>Maintenance time.</strong> A house takes weekends. Shares don't.</li>
+  <li><strong>The emotional value of "our own home"</strong> — painting walls, planting trees, knowing it's ours. That's real even if it doesn't show up in a spreadsheet.</li>
+</ul>
+
+<div class="callout">
+  <strong>The honest takeaway:</strong> The math is closer than most people think. With realistic assumptions, the financial difference between renting+investing and buying is usually <strong>within ±10–20%</strong> of total wealth at year 30 — meaningful, but not as decisive as either side claims. The decision is really about lifestyle, stability, and what we want our daily life to look like — not just dollars.
+</div>
+
+<h2 id="alternatives">10. Other houses worth seeing first</h2>
 <p>Before we commit to 1 Brahe Place, we should walk through these others on the same weekend if possible — to know what else our money buys:</p>
 
 <table>
@@ -903,7 +1060,7 @@ footer {
   <strong>Also worth thinking about:</strong> For the same $1.25M in <strong>Craigie</strong>, <strong>Greenwood</strong>, or <strong>Kingsley</strong> — neighbouring suburbs — we can usually get a 4-bedroom home on a <strong>600–700 m² green-title block</strong>. The build will be older, but the backyard is real, and the long-term capital growth is better.
 </div>
 
-<h2 id="decision">10. How we should decide</h2>
+<h2 id="decision">11. How we should decide</h2>
 <p>Here's a simple way for us to know which side of the fence we're on:</p>
 
 <div class="scenario">
@@ -988,9 +1145,200 @@ function update() {
 }
 
 ['price','deposit','rate','years'].forEach(id => {
-  document.getElementById(id).addEventListener('input', update);
+  document.getElementById(id).addEventListener('input', () => { update(); updateComparison(); });
 });
 update();
+
+// ============= RENT + INVEST vs BUY simulation =============
+
+function simulateRent(years, params) {
+  const { investStart, totalBudgetStart, budgetGrowth, shareReturn, rentMonthly, rentGrowth } = params;
+  const shareM = shareReturn / 12;
+  const rentMGrowth = Math.pow(1 + rentGrowth, 1/12) - 1;
+  const budgetMGrowth = Math.pow(1 + budgetGrowth, 1/12) - 1;
+
+  let portfolio = investStart;
+  let currentRent = rentMonthly;
+  let currentBudget = totalBudgetStart;
+  let totalRentPaid = 0;
+  let totalInvested = 0;
+
+  for (let m = 0; m < years * 12; m++) {
+    totalRentPaid += currentRent;
+    const invest = Math.max(0, currentBudget - currentRent);
+    totalInvested += invest;
+    portfolio = (portfolio + invest) * (1 + shareM);
+    currentRent *= (1 + rentMGrowth);
+    currentBudget *= (1 + budgetMGrowth);
+  }
+
+  return { portfolio, totalRentPaid, totalInvested, totalWealth: portfolio };
+}
+
+function simulateBuy(years, params) {
+  const {
+    investStart, upfrontCash, loanAmount, mortgagePayment, rate, n,
+    totalBudgetStart, budgetGrowth, shareReturn,
+    housePrice, houseGrowth, ongoingMonthly, ongoingGrowth
+  } = params;
+
+  const monthlyR = rate / 12;
+  const shareM = shareReturn / 12;
+  const houseM = Math.pow(1 + houseGrowth, 1/12) - 1;
+  const ongoingMGrowth = Math.pow(1 + ongoingGrowth, 1/12) - 1;
+  const budgetMGrowth = Math.pow(1 + budgetGrowth, 1/12) - 1;
+
+  let portfolio = Math.max(0, investStart - upfrontCash);
+  let balance = loanAmount;
+  let house = housePrice;
+  let currentOngoing = ongoingMonthly;
+  let currentBudget = totalBudgetStart;
+  let totalInterest = 0;
+  let totalMortgage = 0;
+  let totalOngoing = 0;
+  let totalInvested = 0;
+
+  for (let m = 0; m < years * 12; m++) {
+    let actualMortgage = 0;
+    if (balance > 0) {
+      const interest = balance * monthlyR;
+      const principal = Math.min(mortgagePayment - interest, balance);
+      balance -= principal;
+      actualMortgage = interest + principal;
+      totalInterest += interest;
+      if (balance < 0.01) balance = 0;
+    }
+    totalMortgage += actualMortgage;
+    totalOngoing += currentOngoing;
+    const available = Math.max(0, currentBudget - actualMortgage - currentOngoing);
+    totalInvested += available;
+    portfolio = (portfolio + available) * (1 + shareM);
+    house *= (1 + houseM);
+    currentOngoing *= (1 + ongoingMGrowth);
+    currentBudget *= (1 + budgetMGrowth);
+  }
+
+  const equity = house - balance;
+  return {
+    portfolio, equity, house, balance,
+    totalInterest, totalMortgage, totalOngoing, totalInvested,
+    totalWealth: portfolio + equity
+  };
+}
+
+function fmtBig(n) {
+  if (Math.abs(n) >= 1_000_000) return '$' + (n / 1_000_000).toFixed(2) + 'M';
+  if (Math.abs(n) >= 1_000) return '$' + Math.round(n / 1000) + 'k';
+  return '$' + Math.round(n);
+}
+
+function updateComparison() {
+  const price = +document.getElementById('price').value || 1250000;
+  const depPct = +document.getElementById('deposit').value || 20;
+  const rate = (+document.getElementById('rate').value || 6.5) / 100;
+  const term = +document.getElementById('years').value || 30;
+
+  const investStart = +document.getElementById('cur-invest').value || 800000;
+  const weeklyRent = +document.getElementById('cur-rent').value || 1000;
+  const monthlyInvestNow = +document.getElementById('cur-monthly-invest').value || 4000;
+  const shareReturn = (+document.getElementById('share-return').value || 7) / 100;
+  const houseGrowth = (+document.getElementById('house-growth').value || 5) / 100;
+  const rentGrowth = (+document.getElementById('rent-growth').value || 3) / 100;
+  const budgetGrowth = 0.03;
+  const ongoingGrowth = 0.03;
+  const ongoingMonthly = 1000;
+
+  const monthlyRent = weeklyRent * 52 / 12;
+  const totalBudgetStart = monthlyRent + monthlyInvestNow;
+
+  const depositCash = price * depPct / 100;
+  const needsLMI = depPct < 20;
+  const lmi = needsLMI ? (price - depositCash) * 0.025 : 0;
+  const loanAmount = price - depositCash + lmi;
+  const stamp = calcStampDutyWA(price);
+  const fees = 2500;
+  const upfrontCash = depositCash + stamp + fees;
+
+  const monthlyR = rate / 12;
+  const n = term * 12;
+  const mortgagePayment = loanAmount * monthlyR * Math.pow(1+monthlyR, n) / (Math.pow(1+monthlyR, n) - 1);
+
+  const rentParams = { investStart, totalBudgetStart, budgetGrowth, shareReturn, rentMonthly: monthlyRent, rentGrowth };
+  const buyParams = {
+    investStart, upfrontCash, loanAmount, mortgagePayment, rate, n,
+    totalBudgetStart, budgetGrowth, shareReturn,
+    housePrice: price, houseGrowth, ongoingMonthly, ongoingGrowth
+  };
+
+  const horizons = [10, 20, 30];
+  const cardsHtml = horizons.map(y => {
+    const r = simulateRent(y, rentParams);
+    const b = simulateBuy(y, buyParams);
+    const diff = b.totalWealth - r.totalWealth;
+    const rentWins = diff < 0;
+    const margin = Math.abs(diff) / Math.max(r.totalWealth, b.totalWealth);
+    const tight = margin < 0.05;
+    const verdict = tight
+      ? `Basically a tie (${fmtBig(Math.abs(diff))} difference)`
+      : rentWins
+        ? `Rent + Invest wins by ${fmtBig(Math.abs(diff))}`
+        : `Buying wins by ${fmtBig(Math.abs(diff))}`;
+    const pillClass = tight ? 'verdict-pill tight' : 'verdict-pill';
+
+    return `
+      <div class="horizon-card">
+        <div class="horizon-label">After ${y} years</div>
+        <div class="compare-row">
+          <div class="compare-side ${(!rentWins && !tight) ? '' : (rentWins && !tight ? 'winner' : '')}">
+            <div class="side-label">Rent + Invest</div>
+            <div class="wealth">${fmtBig(r.totalWealth)}</div>
+            <div class="breakdown">
+              All shares: <span>${fmtBig(r.portfolio)}</span><br>
+              Rent paid: <span>${fmtBig(r.totalRentPaid)}</span><br>
+              House equity: <span>$0</span>
+            </div>
+          </div>
+          <div class="compare-side ${(!rentWins && !tight) ? 'winner' : ''}">
+            <div class="side-label">Buy this house</div>
+            <div class="wealth">${fmtBig(b.totalWealth)}</div>
+            <div class="breakdown">
+              House equity: <span>${fmtBig(b.equity)}</span><br>
+              Shares left: <span>${fmtBig(b.portfolio)}</span><br>
+              Interest paid: <span>${fmtBig(b.totalInterest)}</span>
+            </div>
+          </div>
+        </div>
+        <span class="${pillClass}">${verdict}</span>
+      </div>
+    `;
+  }).join('');
+
+  document.getElementById('comparison-cards').innerHTML = cardsHtml;
+
+  // Build the key-insight narrative
+  const y30Rent = simulateRent(30, rentParams);
+  const y30Buy = simulateBuy(30, buyParams);
+  const diff30 = y30Buy.totalWealth - y30Rent.totalWealth;
+  const winner30 = diff30 > 0 ? 'Buying' : 'Renting + investing';
+  const pct30 = Math.abs(diff30) / Math.max(y30Rent.totalWealth, y30Buy.totalWealth) * 100;
+
+  const insightEl = document.getElementById('key-insight');
+  insightEl.innerHTML = `
+    <strong>With these assumptions:</strong> ${winner30} ends up ahead by about <strong>${fmtBig(Math.abs(diff30))}</strong> at year 30 — roughly <strong>${pct30.toFixed(0)}%</strong> more total wealth.<br><br>
+    <strong>What's driving this:</strong>
+    <ul style="margin:8px 0 0 0;padding-left:20px;">
+      <li>Buying gives us <strong>leverage</strong> — we control ${fmtBig(price)} of property with just our deposit, so any house price growth amplifies our returns.</li>
+      <li>But buying takes most of our monthly investing capacity. We go from $${monthlyInvestNow.toLocaleString()}/month into Vanguard to about ${fmtBig(Math.max(0, totalBudgetStart - mortgagePayment - ongoingMonthly))}/month.</li>
+      <li>Rent rises over time, but the mortgage stays nominally fixed. By year 20+, the renter is consuming most of their budget just on rent.</li>
+      <li>Try changing the share return up to 8% or the house growth down to 4% — you'll see how sensitive this is. Either side can win depending on what we assume.</li>
+    </ul>
+  `;
+}
+
+['cur-invest','cur-rent','cur-monthly-invest','share-return','house-growth','rent-growth'].forEach(id => {
+  document.getElementById(id).addEventListener('input', updateComparison);
+});
+updateComparison();
 </script>
 </body>
 </html>
