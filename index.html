@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1 Brahe Place, Padbury — Our house check</title>
+<meta name="description" content="A first-home buyer's guide to evaluating 1 Brahe Place, Padbury — for Andres and his wife.">
+<style>
+:root {
+  --bg: #faf7f2;
+  --card: #ffffff;
+  --ink: #1f2937;
+  --muted: #6b7280;
+  --accent: #0f766e;
+  --accent-soft: #ccfbf1;
+  --warning: #b45309;
+  --warning-soft: #fef3c7;
+  --good: #166534;
+  --good-soft: #dcfce7;
+  --danger: #991b1b;
+  --danger-soft: #fee2e2;
+  --border: #e5e7eb;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+.container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 28px 20px 80px;
+}
+header {
+  padding: 12px 0 24px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 28px;
+}
+.eyebrow {
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+h1 {
+  font-size: 30px;
+  margin: 6px 0 6px;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+.sub {
+  color: var(--muted);
+  font-size: 16px;
+}
+h2 {
+  font-size: 22px;
+  margin: 40px 0 12px;
+  letter-spacing: -0.01em;
+}
+h3 { font-size: 17px; margin: 18px 0 6px; }
+p { margin: 8px 0; }
+.toc {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin: 20px 0 28px;
+}
+.toc h3 {
+  margin: 0 0 8px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+.toc ol { padding-left: 20px; margin: 0; }
+.toc li { margin: 4px 0; }
+.toc a { color: var(--accent); text-decoration: none; }
+.toc a:hover { text-decoration: underline; }
+.callout, .warning, .good, .danger {
+  padding: 14px 18px;
+  border-radius: 10px;
+  margin: 16px 0;
+}
+.callout { background: var(--accent-soft); border-left: 4px solid var(--accent); }
+.warning { background: var(--warning-soft); border-left: 4px solid var(--warning); }
+.good { background: var(--good-soft); border-left: 4px solid var(--good); }
+.danger { background: var(--danger-soft); border-left: 4px solid var(--danger); }
+.snapshot {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin: 18px 0;
+}
+.snap-item {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+.snap-label {
+  font-size: 11px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+.snap-value {
+  font-size: 17px;
+  font-weight: 600;
+  margin-top: 2px;
+}
+details {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  margin: 10px 0;
+  overflow: hidden;
+}
+details[open] summary { border-bottom: 1px solid var(--border); }
+summary {
+  padding: 16px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 16px;
+}
+summary::-webkit-details-marker { display: none; }
+summary .qtitle { flex: 1; }
+summary .toggle {
+  font-size: 28px;
+  color: var(--accent);
+  font-weight: 300;
+  line-height: 1;
+  flex-shrink: 0;
+}
+details[open] summary .toggle { transform: rotate(45deg); }
+details .body { padding: 18px 20px 20px; }
+.q-num {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  text-align: center;
+  font-size: 13px;
+  line-height: 26px;
+  margin-right: 10px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+.section-block {
+  margin: 16px 0;
+}
+.section-block > strong {
+  display: block;
+  font-size: 11px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+.flags-row {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+.flag {
+  display: inline-block;
+  font-size: 10.5px;
+  padding: 3px 9px;
+  border-radius: 100px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+.flag.cost { background: #fef3c7; color: #92400e; }
+.flag.legal { background: #e0e7ff; color: #3730a3; }
+.flag.physical { background: #dbeafe; color: #1e40af; }
+.flag.timing { background: #fce7f3; color: #9d174d; }
+.flag.deal { background: #fee2e2; color: #991b1b; }
+.flag.location { background: #dcfce7; color: #14532d; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14.5px;
+  margin: 14px 0;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+th, td {
+  text-align: left;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+}
+th { background: var(--bg); font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: 0.05em; }
+tr:last-child td { border-bottom: none; }
+.calc {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 22px;
+  margin: 16px 0;
+}
+.calc-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 10px 0;
+}
+.calc label {
+  display: block;
+  margin: 12px 0 4px;
+  font-size: 12px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+.calc input[type="number"], .calc input[type="range"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 16px;
+  background: var(--bg);
+  font-family: inherit;
+}
+.calc .result {
+  background: var(--accent-soft);
+  padding: 18px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+.calc .big {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1.1;
+}
+.calc .row {
+  display: flex;
+  justify-content: space-between;
+  margin: 6px 0;
+  font-size: 14px;
+}
+.calc .row span:last-child { font-weight: 600; }
+.calc .note {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 12px;
+  line-height: 1.5;
+}
+ul.clean { padding-left: 20px; }
+ul.clean li { margin: 6px 0; }
+.scenario {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin: 10px 0;
+}
+.scenario strong { color: var(--accent); }
+footer {
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  font-size: 13px;
+  color: var(--muted);
+}
+.tag-bar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 10px 0 4px;
+}
+.controls {
+  display: flex;
+  gap: 10px;
+  margin: 12px 0 24px;
+  flex-wrap: wrap;
+}
+.btn {
+  padding: 8px 14px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--ink);
+  font-family: inherit;
+}
+.btn:hover { background: var(--accent-soft); border-color: var(--accent); }
+.btn.primary { background: var(--accent); color: white; border-color: var(--accent); }
+.btn.primary:hover { background: #115e59; }
+.address-hero {
+  background: linear-gradient(135deg, #0f766e 0%, #115e59 100%);
+  color: white;
+  padding: 28px 24px;
+  border-radius: 14px;
+  margin: 12px 0 24px;
+}
+.address-hero h1 { color: white; margin: 0 0 6px; }
+.address-hero .eyebrow { color: rgba(255,255,255,0.7); }
+.address-hero .sub { color: rgba(255,255,255,0.9); }
+@media (min-width: 600px) {
+  .snapshot { grid-template-columns: repeat(3, 1fr); }
+}
+@media print {
+  body { background: white; }
+  .controls, .toc { display: none; }
+  details { break-inside: avoid; border: 1px solid #ccc; }
+  details > summary::after, details > summary .toggle { display: none; }
+  details > .body { display: block !important; padding: 16px 20px; }
+  summary { padding: 14px 20px; }
+  .address-hero { background: white; color: var(--ink); border: 2px solid var(--ink); }
+  .address-hero h1 { color: var(--ink); }
+  .address-hero .eyebrow, .address-hero .sub { color: var(--ink); }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="address-hero">
+  <div class="eyebrow">For our family — first home check</div>
+  <h1>1 Brahe Place, Padbury</h1>
+  <div class="sub">A simple guide to deciding if this is the one</div>
+</div>
+
+<div class="callout">
+  <strong>What this page is.</strong> I put together everything we should think about before deciding on this house, plus all the right questions to ask Brett at the open home (Sat 16 May, 11:00 AM). Tap any question to see why we're asking and what each possible answer means for us.
+</div>
+
+<div class="toc">
+  <h3>What's in here</h3>
+  <ol>
+    <li><a href="#summary">Quick verdict</a></li>
+    <li><a href="#snapshot">The house at a glance</a></li>
+    <li><a href="#good-news">Why this house works for our family</a></li>
+    <li><a href="#bad-news">What we should be careful about</a></li>
+    <li><a href="#price">Is the price fair?</a></li>
+    <li><a href="#questions">Questions to ask Brett (the agent)</a></li>
+    <li><a href="#mortgage">What it would actually cost us each month</a></li>
+    <li><a href="#hidden">The hidden costs we shouldn't forget</a></li>
+    <li><a href="#alternatives">Other houses worth seeing first</a></li>
+    <li><a href="#decision">How we should decide</a></li>
+  </ol>
+</div>
+
+<div class="controls">
+  <button class="btn primary" onclick="openAll(true)">Open all questions</button>
+  <button class="btn" onclick="openAll(false)">Close all</button>
+  <button class="btn" onclick="window.print()">Print for the open home</button>
+</div>
+
+<h2 id="summary">1. Quick verdict</h2>
+<div class="good">
+  <strong>The short version.</strong> This is a really good <em>family home</em> for two young kids — modern, four bedrooms, pool, theatre room. But it sits on a <strong>small 369 m² block</strong> (about half the typical Padbury size), and once you account for the pool, there's almost no grass for the kids to play on. The asking price is fair if we're buying for the building. It's not great if we wanted long-term land value growth.
+</div>
+
+<p><strong>Buy it if:</strong> the kids are young, we want a low-maintenance modern home, we love the pool, and we're not planning to renovate or extend.</p>
+<p><strong>Walk away if:</strong> we want a real backyard for kids to run around, we want subdivision/extension potential, or the final price goes above <strong>$1.30M</strong>.</p>
+
+<h2 id="snapshot">2. The house at a glance</h2>
+<div class="snapshot">
+  <div class="snap-item"><div class="snap-label">Bedrooms</div><div class="snap-value">4</div></div>
+  <div class="snap-item"><div class="snap-label">Bathrooms</div><div class="snap-value">2 + 2 WCs</div></div>
+  <div class="snap-item"><div class="snap-label">Parking</div><div class="snap-value">2 car garage</div></div>
+  <div class="snap-item"><div class="snap-label">Internal living</div><div class="snap-value">253 m²</div></div>
+  <div class="snap-item"><div class="snap-label">Total lot size</div><div class="snap-value">369 m²</div></div>
+  <div class="snap-item"><div class="snap-label">Layout</div><div class="snap-value">Two-storey</div></div>
+  <div class="snap-item"><div class="snap-label">Pool</div><div class="snap-value">Yes</div></div>
+  <div class="snap-item"><div class="snap-label">Study</div><div class="snap-value">Yes (downstairs)</div></div>
+  <div class="snap-item"><div class="snap-label">Theatre room</div><div class="snap-value">Yes</div></div>
+  <div class="snap-item"><div class="snap-label">Asking price</div><div class="snap-value">From High $1.0M's</div></div>
+  <div class="snap-item"><div class="snap-label">Open home</div><div class="snap-value">Sat 16 May, 11:00 AM</div></div>
+  <div class="snap-item"><div class="snap-label">Agent</div><div class="snap-value">Brett Moore<br><span style="font-size:13px;font-weight:400;color:var(--muted)">Noble Avenue · 0433 717 223</span></div></div>
+</div>
+
+<p><strong>Layout, simply:</strong></p>
+<ul class="clean">
+  <li><strong>Downstairs:</strong> entry, study, open kitchen/living/dining, theatre room, laundry, WC, double garage, alfresco, pool.</li>
+  <li><strong>Upstairs:</strong> master with ensuite + walk-in robe, 3 more bedrooms (two with robes), main bathroom, separate WC, plus a "parents' retreat" sitting area.</li>
+</ul>
+
+<h2 id="good-news">3. Why this house works for our family</h2>
+<div class="good">
+  <ul class="clean" style="margin:0;">
+    <li><strong>Four bedrooms + a study</strong> — each kid gets their own room, and we have a home office or guest room.</li>
+    <li><strong>All bedrooms upstairs together</strong> — kids close to us while they're young.</li>
+    <li><strong>Theatre room</strong> — kid movies, homework, playroom that contains the mess.</li>
+    <li><strong>Parents' retreat upstairs</strong> — a quiet space for us in the evenings when the kids are in bed.</li>
+    <li><strong>Pool</strong> — huge in Perth summers.</li>
+    <li><strong>It's in a cul-de-sac</strong> (Brahe Place is a court) — low traffic, safe for kids.</li>
+    <li><strong>Rear of the house faces roughly north</strong> — the gold standard in Perth (winter sun, summer shade).</li>
+    <li><strong>Walking distance to Padbury Primary and the local park.</strong></li>
+    <li><strong>Modern, near-new build</strong> — much less maintenance than a 1970s Padbury home.</li>
+  </ul>
+</div>
+
+<h2 id="bad-news">4. What we should be careful about</h2>
+<div class="warning">
+  <ul class="clean" style="margin:0;">
+    <li><strong>Tiny backyard.</strong> 369 m² minus the house and the pool leaves almost no grass. If we want the kids running around outside, this house is not ideal.</li>
+    <li><strong>It's almost certainly a "survey-strata" block</strong> — meaning the original block was split into two and we'd be sharing a title scheme with the neighbour. Less freedom to extend or change things.</li>
+    <li><strong>Smaller land = less long-term price growth.</strong> Padbury's strong growth comes mostly from the big blocks that can be subdivided. We can't do that here.</li>
+    <li><strong>Pool means ongoing cost.</strong> Maintenance, chemicals, power, and a fence compliance inspection every 4 years.</li>
+    <li><strong>Two storeys = stairs.</strong> We'd need baby gates if our youngest is still toddling.</li>
+    <li><strong>The dining area is small</strong> (3.7m × 2.4m) — fine for the four of us, tight when family visits.</li>
+    <li><strong>Hot market = pressure.</strong> Padbury houses sell in about 7 days. We may need to offer fast and firm.</li>
+  </ul>
+</div>
+
+<h2 id="price">5. Is the price fair?</h2>
+<p>"From High $1,000,000's" in agent-speak usually means <strong>offers starting around $1.15M–$1.25M</strong>, and final price often lands higher in this market.</p>
+
+<table>
+  <thead>
+    <tr><th>Reference</th><th>Beds</th><th>Land</th><th>Price</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>4A Brahe Place (next door, sold Oct 2023)</td><td>4</td><td>656 m²</td><td>$975,000</td></tr>
+    <tr><td>Same house today (estimated, +growth)</td><td>4</td><td>656 m²</td><td>~$1.30–1.35M</td></tr>
+    <tr><td>Padbury median 4-bed (early 2026)</td><td>4</td><td>~700 m²</td><td>$1.28M</td></tr>
+    <tr><td>Recent Padbury 4-bed sales (Feb 2026)</td><td>4</td><td>varies</td><td>$1.35M–$1.57M</td></tr>
+    <tr><td><strong>1 Brahe Place (this house)</strong></td><td><strong>4</strong></td><td><strong>369 m²</strong></td><td><strong>asking high $1.0M's</strong></td></tr>
+  </tbody>
+</table>
+
+<div class="callout">
+  <strong>My honest take:</strong> Fair value is <strong>$1.15M–$1.25M</strong>. Above $1.30M we're paying for the building, not the land — fine if we love the house, but it limits future resale upside. <strong>I think we should set a hard ceiling at $1.30M</strong> before we walk in.
+</div>
+
+<h2 id="questions">6. Questions to ask Brett (the agent)</h2>
+<p>Tap each one to see why we're asking and what different answers mean for us. Print this page or open all questions before the open home so we don't miss anything.</p>
+
+<!-- ============ Q1 ============ -->
+<details>
+  <summary><span class="qtitle"><span class="q-num">1</span>What kind of title is this — green title, survey-strata, or strata?</span><span class="toggle">+</span></summary>
+  <div class="body">
+    <div class="flags-row">
+      <span class="flag legal">Legal</span>
+      <span class="flag cost">Cost</span>
+      <span class="flag deal">Deal-breaker</span>
+    </div>
+    <div class="section-block">
+      <strong>Why we're asking</strong>
+      The "title type" decides how much freedom we have over the property. With a 369 m² lot, it's almost certainly not green title — it's been sub-divided. We need to know which kind of sub-division.
+    </div>
+    <div class="section-block">
+      <strong>What each answer means for us</strong>
+      <ul class="clean">
+        <li><strong>"Green title"</strong> → ideal but unlikely on this size lot. We'd own the land outright. No shared anything. Most freedom, best resale.</li>
+        <li><strong>"Survey-strata"</strong> → the most common for this type of block in Padbury. We own our piece of land separately, just sharing a survey plan with the neighbour. Usually <strong>no ongoing fees</strong> and minimal restrictions. <em>This is fine.</em></li>
+        <li><strong>"Strata title"</strong> → we'd share insurance and pay a quarterly fee to a strata company. Less freedom to renovate. Less attractive on resale. <em>Ask how much the fees are.</em></li>
+      </ul>
+    </div>
+  </div>
+</details>
+
+<!-- ============ Q2 ============ -->
+<details>
+  <summary><span class="qtitle"><span class="q-num">2</span>When was the house built and when was the pool installed?</span><span class="toggle">+</span></summary>
+  <div class="body">
+    <div class="flags-row">
+      <span class="flag physical">Building</span>
+      <span class="flag cost">Cost</span>
+    </div>
+    <div class="section-block">
+      <strong>Why we're asking</strong>
+      Age tells us roughly how much repair we're likely to face in the next 10 years. It also affects insurance, warranty, and electrical/plumbing standards.
+    </div>
+    <div class="section-block">
+      <strong>What each answer means for us</strong>
+      <ul class="clean">
+        <li><strong>Under 10 years</strong> → very few maintenance surprises. May still have some structural warranty. Great.</li>
+        <li><strong>10–20 years</strong> → likely modern wiring/plumbing, but appliances (oven, dishwasher, aircon) may be near end of life. Budget $5–15k for replacements in the first 5 years.</li>
+        <li><strong>Over 20 years</strong> → we'd want a detailed building inspection. Possible repainting, roof, hot water, aircon replacements within a few years.</li>
+        <li><strong>Pool over 15 years old</strong> → liner/tiles may need replacement (cost: $8–25k). Pump and filter likely on borrowed time.</li>
+      </ul>
+    </div>
+  </div>
+</details>
+
+<!-- ============ Q3 ============ -->
+<details>
+  <summary><span class="qtitle"><span class="q-num">3</span>What primary school is this address zoned for?</span><span class="toggle">+</span></summary>
+  <div class="body">
+    <div class="flags-row">
+      <span class="flag location">Location</span>
+      <span class="flag deal">Deal-breaker</span>
+    </div>
+    <div class="section-block">
+      <strong>Why we're asking</strong>
+      Padbury has four primary schools. The catchment line decides which one our kids go to for 7 years. Some addresses on Brahe Place go to Padbury Primary, others to Bambara Primary.
+    </div>
+    <div class="section-block">
+      <strong>What each answer means for us</strong>
+      <ul class="clean">
+        <li><strong>Padbury Primary</strong> → ~600 m walk, established community school.</li>
+        <li><strong>Bambara Primary</strong> → ~1.2 km, also good reputation, slightly newer.</li>
+        <li><strong>"You'd have to check"</strong> → we verify ourselves at schoolsonline.det.wa.edu.au before making the offer. <em>Never trust the agent's word on this — it's the buyer's responsibility.</em></li>
+      </ul>
+    </div>
+  </div>
+</details>
+
+<!-- ============ Q4 ============ -->
+<details>
+  <summary><span class="qtitle"><span class="q-num">4</span>What are the council rates and water rates per year?</span><span class="toggle">+</span></summary>
+  <div class="body">
+    <div class="flags-row">
+      <span class="flag cost">Cost</span>
+    </div>
+    <div class="section-block">
+      <strong>Why we're asking</strong>
+      These are ongoing costs that come bundled with the property — we pay them every year for as long as we own it. They're never optional.
+    </div>
+    <div class="section-block">
+      <strong>What each answer means for us</strong>
+      <ul class="clean">
+        <li><strong>Council rates $1,800–$2,400/year</strong> → normal for Padbury. Fine.</li>
+        <li><strong>Council rates above $2,500/year</strong> → unusual for a 369 m² block. Worth questioning.</li>
+        <li><strong>Water rates $1,200–$1,500/year</strong> → typical. With a pool, expect the higher end.</li>
+        <li><strong>"I'll have to check"</strong> → fair answer. We'd see exact figures in the Section 32-equivalent contract before signing.</li>
+      </ul>
+    </div>
+  </div>
+</details>
+
+<!-- ============ Q5 ============ -->
+<details>
+  <summary><span class="qtitle"><span class="q-num">5</span>Are there any strata fees? If yes, how much per quarter?</span><span class="toggle">+</span></summary>
+  <div class="body">
+    <div class="flags-row">
+      <span class="flag cost">Cost</span>
+      <span class="flag legal">Legal</span>
+    </div>
+    <div class="section-block">
+      <strong>Why we're asking</strong>
+      If this is strata (not survey-strata), there are ongoing fees we'd pay every quarter forever. Most survey-strata don't have fees, but some have a small contribution for shared insurance.
+    </div>
+    <div class="section-block">
+      <strong>What each answer means for us</strong>
+      <ul class="clean">
+        <li><strong>"No fees"</strong> → great. Likely survey-strata with no shared property.</li>
+        <li><strong>Under $300/year</strong> → fine — usually just shared insurance.</li>
+        <li><strong>$300–$1,500/year</strong> → noticeable annual cost. Ask what it covers.</li>
+        <li><strong>Over $1,500/year</strong> → unusual for a duplex pair. Ask if there's a special levy planned (a one-off big charge for repairs).</li>
+      </ul>
+    </div>
+  </div>
+</details>
+
+<!-- ============ Q6 ============ -->
+<details>
+  <summary><span class="qtitle"><span class="q-num">6</span>Does the pool have a current compliance certificate?</span><span class="toggle">+</span></summary>
+  <div class="body">
+    <div class="flags-row">
+      <span class="flag legal">Legal</span>
+      <span class="flag cost">Cost</span>
+    </div>
+    <div class="section-block">
+      <strong>Why we're asking</strong>
+      In WA, pool fencing has to be inspected by the council every 4 years. If it fails, the owner has to fix it before selling — but sometimes it gets pushed to the buyer.
+    </div>
+    <div class="section-block">
+      <strong>What each answer means for us</strong>
+      <ul class="clean">
+        <li><strong>"Inspected within the last 4 years, fully compliant"</strong> → perfect. No action needed.</li>
+        <li><strong>"Compliant but inspection due soon"</strong> → fine, just budget $80–150 for the next inspection.</li>
+        <li><strong>"Not compliant" or "We don't know"</strong> → could be a $500–$5,000 fix (replacing fencing, gate, latches). We'd want this resolved <strong>before</strong> settlement, in writing.</li>
+      </ul>
+    </div>
+  </div>
+</details>
+
+<!-- ============ Q7 ============ -->
+<details>
+  <summary><span class="qtitle"><span class="q-num">7</span>Has the property had any major works or repairs we should know about?</span><span class="toggle">+</span></summary>
+  <div class="body">
+    <div class="flags-row">
+      <span class="flag physical">Building</span>
+      <span class="flag legal">Legal</span>
+    </div>
+    <div class="section-block">
+      <strong>Why we're asking</strong>
+      Past major repairs reveal weak points (water damage, structural issues, roof). Sellers have to disclose known issues — but it's much easier to dodge a question than refuse to answer one.
+    </div>
+    <div class="section-block">
+      <strong>What each answer means for us</strong>
+      <ul class="clean">
+        <li><strong>"Nothing major"</strong> → good, but we still get an independent building inspection.</li>
+        <li><strong>"Minor things — repainted, replaced a hot water system"</strong> → totally normal.</li>
+        <li><strong>"Re-stumping / roof restoration / re-plumbing"</strong> → could indicate a serious past issue. Ask for documentation and warranty.</li>
+        <li><strong>"Water damage / leak repair"</strong> → red flag. We need a thorough inspection and confirmation that the cause was fixed, not just the symptom.</li>
+      </ul>
+    </div>
+  </div>
+</details>
+
+<!-- ============ Q8 ============ -->
+<details>
+  <summary><span class="qtitle"><span class="q-num">8</span>What type of air conditioning does it have?</span><span class="toggle">+</span></summary>
+  <div class="body">
+    <div class="flags-row">
+      <span class="flag physical">Building</span>
+      <span class="flag cost">Cost</span>
+    </div>
+    <div class="section-block">
+      <strong>Why we're asking</strong>
+      At this price point, we should expect ducted reverse-cycle. Lesser systems mean either retrofitting (expensive) or higher electricity bills.
+    </div>
+    <div class="section-block">
+      <strong>What each answer means for us</strong>
+      <ul class="clean">
+        <li><strong>Ducted reverse-cycle</strong> → ideal. Whole-house heating + cooling. Check the age.</li>
+        <li><strong>Split systems in main rooms</strong> → fine but bedrooms upstairs may be hot/cold. Acceptable.</li>
+        <li><strong>Evaporative cooling only</strong> → cools but doesn't heat well, and struggles on humid days. We'd want to retrofit (~$8–15k).</li>
+        <li><strong>None / window units</strong> → unusual at this price. Walk away or factor a major upgrade.</li>
+      </ul>
+    </div>
+  </div>
+</details>
+
+<!-- ============ Q9 ============ -->
+<details>
+  <summary><span class="qtitle"><span class="q-num">9</span>Are there solar panels? What size, and is there a battery?</span><span class="toggle">+</span></summary>
+  <div class="body">
+    <div class="flags-row">
+      <span class="flag cost">Cost</span>
+    </div>
+    <div class="section-block">
+      <strong>Why we're asking</strong>
+      Solar in Perth saves serious money — easily $1,200–$2,500 a year off our power bill. A house with solar already installed is worth more than one without.
+    </div>
+    <div class="section-block">
+      <strong>What each answer means for us</strong>
+      <ul class="clean">
+        <li><strong>6.6 kW+ system with battery</strong> → big plus. Could cut our electricity bill almost to zero.</li>
+        <li><strong>6.6 kW+ system, no battery</strong> → still excellent. Saves $1,200–$2,000/year.</li>
+        <li><strong>Smaller system (3–5 kW)</strong> → some savings. Could expand later.</li>
+        <li><strong>No solar</strong> → not a deal-breaker, but we'd plan to install it within 6 months (~$5–10k upfront, pays back in 4–6 years).</li>
+      </ul>
+    </div>
+  </div>
+</details>
+
+<!-- ============ Q10 ============ -->
+<details>
+  <summary><span class="qtitle"><span class="q-num">10</span>What's included in the sale — appliances, blinds, pool equipment?</span><span class="toggle">+</span></summary>
+  <div class="body">
+    <div class="flags-row">
+      <span class="flag legal">Legal</span>
+      <span class="flag cost">Cost</span>
+    </div>
+    <div class="section-block">
+      <strong>Why we're asking</strong>
+      Anything not listed as included can legally be removed by the seller before settlement. We've heard stories of light fittings, blinds, even garden plants being taken.
+    </div>
+    <div class="section-block">
+      <strong>What each answer means for us</strong>
+      <ul class="clean">
+        <li><strong>Fixed items, blinds/curtains, dishwasher, oven, pool cleaner all included</strong> → standard expectation. Get it written into the offer.</li>
+        <li><strong>"Dishwasher / fridge not included"</strong> → ok, but factor $1–3k each into our moving budget.</li>
+        <li><strong>"TVs, garden statues, light fittings excluded"</strong> → fine if specified upfront, awful if discovered after settlement.</li>
+      </ul>
+    </div>
+    <div class="callout" style="margin-top:14px;">
+      <strong>Action:</strong> Whatever Brett says, we list every "included" item explicitly in our written offer — every appliance, every blind, the pool cleaner, the air conditioning units.
+    </div>
+  </div>
+</details>
+
+<!-- ============ Q11 ============ -->
+<details>
+  <summary><span class="qtitle"><span class="q-num">11</span>Why is the owner selling, and how long have they owned it?</span><span class="toggle">+</span></summary>
+  <div class="body">
+    <div class="flags-row">
+      <span class="flag timing">Negotiation</span>
+    </div>
+    <div class="section-block">
+      <strong>Why we're asking</strong>
+      The seller's situation tells us how flexible the price might be, and whether there might be a hidden problem.
+    </div>
+    <div class="section-block">
+      <strong>What each answer means for us</strong>
+      <ul class="clean">
+        <li><strong>"Upgrading" / "Downsizing" / "Moving for work"</strong> → normal. Seller is rational. Negotiation depends on competition.</li>
+        <li><strong>"They've already bought another house"</strong> → strong negotiation leverage for us. They need to sell.</li>
+        <li><strong>"Owned for less than 2 years"</strong> → unusual. Ask politely why. Could be life event (divorce, work) or could be an undisclosed issue with the house or street.</li>
+        <li><strong>"Estate sale" / "Deceased estate"</strong> → executors usually want a clean and quick sale. Often negotiable.</li>
+      </ul>
+    </div>
+  </div>
+</details>
+
+<!-- ============ Q12 ============ -->
+<details>
+  <summary><span class="qtitle"><span class="q-num">12</span>How many offers have you received? When's the deadline?</span><span class="toggle">+</span></summary>
+  <div class="body">
+    <div class="flags-row">
+      <span class="flag timing">Negotiation</span>
+    </div>
+    <div class="section-block">
+      <strong>Why we're asking</strong>
+      This shapes our offer strategy. In a hot market, agents use offer counts as pressure. We need to know if it's real pressure.
+    </div>
+    <div class="section-block">
+      <strong>What each answer means for us</strong>
+      <ul class="clean">
+        <li><strong>"No offers yet"</strong> → we're in a strong position. Can offer slightly below asking with conditions.</li>
+        <li><strong>"One or two offers"</strong> → competition exists but not heated. Offer at the lower end of our range.</li>
+        <li><strong>"Multiple offers"</strong> → we need to decide fast. Offer at our true ceiling or walk.</li>
+        <li><strong>"There's a deadline this Friday"</strong> → may be genuine, may be a tactic. Stay disciplined to our $1.30M ceiling regardless.</li>
+      </ul>
+    </div>
+    <div class="warning" style="margin-top:14px;">
+      <strong>Remember:</strong> The agent works for the seller, not for us. Their job is to get the highest price. Be polite, but don't let urgency push us past our limit.
+    </div>
+  </div>
+</details>
+
+<!-- ============ Q13 ============ -->
+<details>
+  <summary><span class="qtitle"><span class="q-num">13</span>Are there any easements, encumbrances, or council notices on the property?</span><span class="toggle">+</span></summary>
+  <div class="body">
+    <div class="flags-row">
+      <span class="flag legal">Legal</span>
+      <span class="flag deal">Deal-breaker</span>
+    </div>
+    <div class="section-block">
+      <strong>Why we're asking</strong>
+      An easement is a legal right someone else has over part of our land — like a drain or a power line — that we can't build over. A council notice could mean unapproved building work that we'd inherit.
+    </div>
+    <div class="section-block">
+      <strong>What each answer means for us</strong>
+      <ul class="clean">
+        <li><strong>"Nothing unusual"</strong> → standard. We'd still verify with our conveyancer when reviewing the contract.</li>
+        <li><strong>"There's a drainage easement at the rear"</strong> → very common in survey-strata. Means we can't build over a small strip. Usually fine.</li>
+        <li><strong>"Unapproved patio / pergola"</strong> → we ask seller to obtain retrospective council approval <strong>before</strong> settlement, in writing. Could cost them $1–5k and delay settlement.</li>
+        <li><strong>"Pending council notice"</strong> → red flag. We need full details before we offer.</li>
+      </ul>
+    </div>
+  </div>
+</details>
+
+<!-- ============ Q14 ============ -->
+<details>
+  <summary><span class="qtitle"><span class="q-num">14</span>What type of NBN is connected here?</span><span class="toggle">+</span></summary>
+  <div class="body">
+    <div class="flags-row">
+      <span class="flag physical">Building</span>
+    </div>
+    <div class="section-block">
+      <strong>Why we're asking</strong>
+      Working from home, kids' schoolwork, streaming — internet quality matters. NBN type varies a lot by Perth suburb.
+    </div>
+    <div class="section-block">
+      <strong>What each answer means for us</strong>
+      <ul class="clean">
+        <li><strong>FTTP (fibre to the premises)</strong> → best. Up to 1000 Mbps. Future-proof.</li>
+        <li><strong>FTTC (fibre to the curb)</strong> → very good, up to 250 Mbps.</li>
+        <li><strong>FTTN (fibre to the node)</strong> → speed depends on distance to the local node. Could be slow.</li>
+        <li><strong>HFC (cable)</strong> → fast but congestion-prone in the evenings.</li>
+        <li><strong>"I don't know"</strong> → we check ourselves at nbnco.com.au using the address (takes 30 seconds).</li>
+      </ul>
+    </div>
+  </div>
+</details>
+
+<!-- ============ Q15 ============ -->
+<details>
+  <summary><span class="qtitle"><span class="q-num">15</span>Anything new being built or planned near here that buyers should know about?</span><span class="toggle">+</span></summary>
+  <div class="body">
+    <div class="flags-row">
+      <span class="flag location">Location</span>
+    </div>
+    <div class="section-block">
+      <strong>Why we're asking</strong>
+      Quiet streets can become noisy if a multi-storey development goes in opposite, or a new road is widened. The agent often knows about local developments because other neighbours have asked.
+    </div>
+    <div class="section-block">
+      <strong>What each answer means for us</strong>
+      <ul class="clean">
+        <li><strong>"Nothing I'm aware of"</strong> → fine. We can verify by checking the City of Joondalup development applications register.</li>
+        <li><strong>"A few subdivisions happening"</strong> → normal for Padbury, doesn't usually affect quality of life much.</li>
+        <li><strong>"Apartment development / commercial build / road widening"</strong> → big impact on traffic, noise, and resale value. Investigate carefully.</li>
+      </ul>
+    </div>
+  </div>
+</details>
+
+<h2 id="mortgage">7. What it would actually cost us each month</h2>
+<p>Use the calculator below. Move the sliders to see how the deposit and rate change the monthly payment. The default is a $1.25M purchase, which is what I think we should offer.</p>
+
+<div class="calc">
+  <div class="calc-row">
+    <div>
+      <label for="price">Purchase price</label>
+      <input type="number" id="price" value="1250000" step="10000">
+    </div>
+    <div>
+      <label for="deposit">Deposit (%)</label>
+      <input type="number" id="deposit" value="20" step="1" min="5" max="50">
+    </div>
+  </div>
+  <div class="calc-row">
+    <div>
+      <label for="rate">Interest rate (%)</label>
+      <input type="number" id="rate" value="6.5" step="0.1" min="3" max="12">
+    </div>
+    <div>
+      <label for="years">Loan term (years)</label>
+      <input type="number" id="years" value="30" step="1" min="10" max="40">
+    </div>
+  </div>
+
+  <div class="result">
+    <div style="font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;font-weight:600;margin-bottom:4px;">Monthly repayment</div>
+    <div class="big" id="monthly">$0</div>
+    <div style="margin-top:14px;">
+      <div class="row"><span>Loan amount</span><span id="loan">$0</span></div>
+      <div class="row"><span>Deposit needed (cash)</span><span id="depositCash">$0</span></div>
+      <div class="row"><span>Lenders mortgage insurance (estimate)</span><span id="lmi">$0</span></div>
+      <div class="row"><span>WA stamp duty (estimate)</span><span id="stamp">$0</span></div>
+      <div class="row"><span>Total upfront cash needed</span><span id="upfront" style="color:var(--accent);font-weight:700;">$0</span></div>
+      <div class="row" style="border-top:1px solid var(--border);padding-top:8px;margin-top:8px;"><span>Total interest paid over the loan life</span><span id="totalInterest">$0</span></div>
+      <div class="row"><span>Total amount paid (loan + interest)</span><span id="totalPaid">$0</span></div>
+    </div>
+    <div class="note">
+      Monthly repayment uses a standard principal-and-interest formula. LMI applies if our deposit is under 20% — the estimate above assumes ~2.5% of the loan. WA stamp duty is calculated using the standard residential rates. None of these figures include solicitor fees, building inspection, or moving costs (budget another $2,500–$5,000).
+    </div>
+  </div>
+</div>
+
+<h2 id="hidden">8. The hidden costs we shouldn't forget</h2>
+<table>
+  <thead><tr><th>One-time costs</th><th>Estimate</th></tr></thead>
+  <tbody>
+    <tr><td>WA stamp duty (at $1.25M)</td><td>~$53,000</td></tr>
+    <tr><td>Building &amp; pest inspection</td><td>$500–$800</td></tr>
+    <tr><td>Conveyancer / settlement agent</td><td>$1,000–$1,500</td></tr>
+    <tr><td>Loan establishment fee</td><td>$300–$700</td></tr>
+    <tr><td>Mortgage registration + transfer fee</td><td>~$500</td></tr>
+    <tr><td>LMI if deposit under 20%</td><td>$20,000–$45,000 (added to loan)</td></tr>
+    <tr><td>Moving costs</td><td>$1,500–$3,000</td></tr>
+    <tr><td>Initial repairs / furniture / curtains</td><td>$3,000–$15,000</td></tr>
+  </tbody>
+</table>
+
+<table>
+  <thead><tr><th>Ongoing yearly costs</th><th>Estimate</th></tr></thead>
+  <tbody>
+    <tr><td>Council rates (City of Joondalup)</td><td>$1,800–$2,400</td></tr>
+    <tr><td>Water rates (Water Corporation)</td><td>$1,200–$1,600</td></tr>
+    <tr><td>Building &amp; contents insurance</td><td>$1,500–$2,500</td></tr>
+    <tr><td>Strata fees (if applicable)</td><td>$0–$1,200</td></tr>
+    <tr><td>Pool maintenance (chemicals, power, repairs)</td><td>$2,500–$4,000</td></tr>
+    <tr><td>Pool fence compliance inspection (every 4 years)</td><td>$80–$150</td></tr>
+    <tr><td>Aircon servicing</td><td>$200–$400</td></tr>
+    <tr><td>Gutter cleaning, general upkeep</td><td>$300–$600</td></tr>
+    <tr><td>Electricity + gas (4-person home + pool)</td><td>$2,500–$3,800</td></tr>
+    <tr><td><strong>Total ongoing per year</strong></td><td><strong>~$10,000–$16,500</strong></td></tr>
+  </tbody>
+</table>
+
+<div class="warning">
+  <strong>The big lesson:</strong> The mortgage repayment is only about <strong>60–70% of the true monthly cost</strong> of owning. Most first-home buyers forget the other 30–40%. We need to plan for ~$1,000/month of ongoing house costs <em>on top of</em> the mortgage.
+</div>
+
+<h2 id="alternatives">9. Other houses worth seeing first</h2>
+<p>Before we commit to 1 Brahe Place, we should walk through these others on the same weekend if possible — to know what else our money buys:</p>
+
+<table>
+  <thead><tr><th>Address</th><th>Beds / Baths / Park</th><th>Asking</th><th>Why look</th></tr></thead>
+  <tbody>
+    <tr><td>5A Boyd Court, Padbury</td><td>4 / 2 / 2</td><td>From $1.2m</td><td>Likely similar strata — compare quality and finish.</td></tr>
+    <tr><td>10A Gillen Court, Padbury</td><td>4 / 2 / 2</td><td>Offers</td><td>Another strata option — gauge the market.</td></tr>
+    <tr><td>54 Grey Road, Padbury</td><td>4 / 1 / 3</td><td>Mid millions</td><td>Original-condition family home on a bigger block. Renovation potential.</td></tr>
+    <tr><td>26 Mason Way, Padbury</td><td>3 / 1 / 3</td><td>From $990k</td><td>Smaller home, less money, may have a real backyard.</td></tr>
+  </tbody>
+</table>
+
+<div class="callout">
+  <strong>Also worth thinking about:</strong> For the same $1.25M in <strong>Craigie</strong>, <strong>Greenwood</strong>, or <strong>Kingsley</strong> — neighbouring suburbs — we can usually get a 4-bedroom home on a <strong>600–700 m² green-title block</strong>. The build will be older, but the backyard is real, and the long-term capital growth is better.
+</div>
+
+<h2 id="decision">10. How we should decide</h2>
+<p>Here's a simple way for us to know which side of the fence we're on:</p>
+
+<div class="scenario">
+  <strong>Decision A — buy 1 Brahe Place:</strong> if we agree that "modern home with pool" matters more to us right now than "big backyard". The kids are young, we want low maintenance, and we love the floor plan. We cap our offer at <strong>$1.30M</strong>.
+</div>
+
+<div class="scenario">
+  <strong>Decision B — keep looking:</strong> if we agree that a real backyard with grass is non-negotiable for our kids' next 10 years, or if the title turns out to be strata with meaningful fees, or if the asking price climbs above $1.30M.
+</div>
+
+<div class="callout">
+  <strong>The one question to ask each other after the open home:</strong><br>
+  <em>"Can I picture our kids playing here for the next ten years?"</em><br><br>
+  If both of us say yes, this is our house. If either of us hesitates, we keep looking.
+</div>
+
+<h2>Final reminders for Saturday</h2>
+<ul class="clean">
+  <li>Print this page or bring it on the phone.</li>
+  <li>Take pictures of every room, the meter box, the air-con unit, the pool equipment shed.</li>
+  <li>Walk the street — at 11am it's quiet, but check again at school pickup time.</li>
+  <li>Look at the neighbouring duplex pair — that's what we'd be living next to.</li>
+  <li>Don't sign anything on the day. We always go home, sleep on it, and decide together.</li>
+  <li>If we're serious, the next step is: building &amp; pest inspection → conveyancer reviews the contract → finance approval → make a written offer with conditions.</li>
+</ul>
+
+<footer>
+  <p>Made with love for our first home decision. Built 12 May 2026.<br>
+  Sources: REIWA, Noble Avenue listing, allhomes, City of Joondalup, WA Department of Education, Microburbs.<br>
+  Nothing here is professional financial or legal advice. We use our conveyancer and broker for that.</p>
+</footer>
+
+</div>
+
+<script>
+function openAll(state) {
+  document.querySelectorAll('details').forEach(d => d.open = state);
+}
+
+function calcStampDutyWA(price) {
+  if (price <= 120000) return price * 0.019;
+  if (price <= 150000) return 2280 + (price - 120000) * 0.0285;
+  if (price <= 360000) return 3135 + (price - 150000) * 0.038;
+  if (price <= 725000) return 11115 + (price - 360000) * 0.0475;
+  return 28453 + (price - 725000) * 0.0515;
+}
+
+function fmt(n) {
+  return '$' + Math.round(n).toLocaleString('en-AU');
+}
+
+function update() {
+  const price = Math.max(0, +document.getElementById('price').value || 0);
+  const depPct = Math.max(5, Math.min(50, +document.getElementById('deposit').value || 20));
+  const rate = Math.max(0.1, +document.getElementById('rate').value || 6.5);
+  const years = Math.max(1, +document.getElementById('years').value || 30);
+
+  const depositCash = price * depPct / 100;
+  const loanBase = price - depositCash;
+  const needsLMI = depPct < 20;
+  const lmi = needsLMI ? loanBase * 0.025 : 0;
+  const loan = loanBase + lmi;
+
+  const r = rate / 100 / 12;
+  const n = years * 12;
+  const monthly = loan * r * Math.pow(1 + r, n) / (Math.pow(1 + r, n) - 1);
+  const totalPaid = monthly * n;
+  const totalInterest = totalPaid - loan;
+
+  const stamp = calcStampDutyWA(price);
+  const fees = 2500; // conveyancer, inspection, registration approx
+  const upfront = depositCash + stamp + fees;
+
+  document.getElementById('monthly').textContent = fmt(monthly);
+  document.getElementById('loan').textContent = fmt(loan);
+  document.getElementById('depositCash').textContent = fmt(depositCash);
+  document.getElementById('lmi').textContent = needsLMI ? fmt(lmi) + ' (added to loan)' : 'None (deposit over 20%)';
+  document.getElementById('stamp').textContent = fmt(stamp);
+  document.getElementById('upfront').textContent = fmt(upfront);
+  document.getElementById('totalInterest').textContent = fmt(totalInterest);
+  document.getElementById('totalPaid').textContent = fmt(totalPaid);
+}
+
+['price','deposit','rate','years'].forEach(id => {
+  document.getElementById(id).addEventListener('input', update);
+});
+update();
+</script>
+</body>
+</html>
