@@ -978,14 +978,34 @@ footer {
   <div class="snap-item"><div class="snap-label">Monthly into Vanguard</div><div class="snap-value">$4,000</div></div>
 </div>
 
-<p><strong>What's really at stake:</strong> if we buy this house, we'd put ~<strong>$308,000</strong> of our $800k portfolio into deposit + stamp duty + costs. The rest stays invested, but the monthly amount we can <em>continue</em> investing drops from <strong>$4,000</strong> to roughly <strong>$1,000</strong> (because most of our monthly budget now goes to the mortgage and ongoing costs).</p>
+<h3>How the two strategies actually differ</h3>
+<div class="compare-grid" style="grid-template-columns: 1fr 1fr; gap: 14px;">
+  <div class="horizon-card">
+    <div class="horizon-label">Strategy 1 — Keep renting + investing</div>
+    <ul class="clean" style="margin:0;">
+      <li>Keep our $800k portfolio fully invested</li>
+      <li>Pay rent each month (out of income — <strong>no other housing costs</strong>: no council rates, no insurance, no pool maintenance, no major repairs)</li>
+      <li>Keep contributing $4,000/month into Vanguard</li>
+      <li>Everything compounds in shares</li>
+    </ul>
+  </div>
+  <div class="horizon-card">
+    <div class="horizon-label">Strategy 2 — Buy 1 Brahe Place</div>
+    <ul class="clean" style="margin:0;">
+      <li>Use ~<strong>$308k</strong> of our portfolio for deposit + stamp duty + costs. Portfolio drops to ~$492k.</li>
+      <li>Pay mortgage every month for 30 years + ongoing house costs (~$1,000/month for rates, insurance, pool, etc., growing with inflation)</li>
+      <li>House appreciates over time; mortgage gets paid down → equity builds</li>
+      <li>Likely <strong>can't keep investing $4k/month</strong> — the mortgage eats most of our investing capacity. Default below is $0/month; you can change it if you think you can still invest some.</li>
+    </ul>
+  </div>
+</div>
 
 <div class="callout">
-  <strong>The trade-off in one line:</strong> We swap roughly <strong>$300k upfront + $3,000/month of share investing</strong> for the right to live in our own home and build equity through the mortgage.
+  <strong>The honest trade-off:</strong> We give up <strong>$308k upfront</strong> + the ability to compound $4k/month for 30 years. In return we get a house that appreciates (tax-free as primary residence) and forced equity through mortgage repayments. Which strategy ends up wealthier depends entirely on the assumed returns — see the math below.
 </div>
 
 <h3>The comparison calculator</h3>
-<p>Move any number and the results below recalculate. The defaults reflect our actual situation. The share return uses Vanguard's long-term historical average. The house growth uses a <em>realistic</em> long-term Perth number — much more conservative than Padbury's recent 12–15% (which can't continue forever).</p>
+<p>Change any input. The two scenarios run independently — they don't share a budget. Each shows exactly what happens to our wealth under that strategy.</p>
 
 <div class="assumptions">
   <div class="assumption-grid">
@@ -998,8 +1018,12 @@ footer {
       <input type="number" id="cur-rent" value="1000" step="50" style="width:100%;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-size:16px;background:var(--bg);font-family:inherit;">
     </div>
     <div>
-      <label for="cur-monthly-invest" style="display:block;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;font-weight:600;margin-bottom:4px;">Monthly into shares ($)</label>
+      <label for="cur-monthly-invest" style="display:block;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;font-weight:600;margin-bottom:4px;">Monthly invest <em>while renting</em> ($)</label>
       <input type="number" id="cur-monthly-invest" value="4000" step="100" style="width:100%;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-size:16px;background:var(--bg);font-family:inherit;">
+    </div>
+    <div>
+      <label for="buy-monthly-invest" style="display:block;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;font-weight:600;margin-bottom:4px;">Monthly invest <em>after buying</em> ($)</label>
+      <input type="number" id="buy-monthly-invest" value="0" step="100" min="0" style="width:100%;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-size:16px;background:var(--bg);font-family:inherit;">
     </div>
     <div>
       <label for="share-return" style="display:block;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;font-weight:600;margin-bottom:4px;">Share return (% / year)</label>
@@ -1010,14 +1034,46 @@ footer {
       <input type="number" id="house-growth" value="5" step="0.5" min="0" max="15" style="width:100%;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-size:16px;background:var(--bg);font-family:inherit;">
     </div>
     <div>
-      <label for="rent-growth" style="display:block;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;font-weight:600;margin-bottom:4px;">Rent growth (% / year)</label>
+      <label for="rent-growth" style="display:block;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;font-weight:600;margin-bottom:4px;">Rent growth (% / year, for cost reference)</label>
       <input type="number" id="rent-growth" value="3" step="0.5" min="0" max="10" style="width:100%;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-size:16px;background:var(--bg);font-family:inherit;">
+    </div>
+    <div>
+      <label for="buy-ongoing" style="display:block;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;font-weight:600;margin-bottom:4px;">Buy: monthly ongoing house costs ($)</label>
+      <input type="number" id="buy-ongoing" value="1000" step="50" style="width:100%;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-size:16px;background:var(--bg);font-family:inherit;">
     </div>
   </div>
   <p class="note" style="font-size:12px;color:var(--muted);margin-top:14px;line-height:1.5;">
-    Note: this uses the purchase price, deposit, interest rate, and loan term from the mortgage calculator above. Both scenarios assume the same total monthly cash budget (rent + invest, or mortgage + ongoing + invest), growing with inflation. Tax effects are ignored — but remember the family home is <strong>capital gains tax free</strong> on sale, while shares are not.
+    Uses purchase price, deposit, interest rate, and loan term from the mortgage calculator above. The two scenarios are independent — no shared budget. Tax effects are ignored, but remember the family home is <strong>capital gains tax free</strong> on sale, while shares are not.
   </p>
 </div>
+
+<details style="margin-top:16px;">
+  <summary><span class="qtitle">How the compounding math works (tap to expand)</span><span class="toggle">+</span></summary>
+  <div class="body">
+    <p><strong>Rent strategy — each month:</strong></p>
+    <ol class="clean">
+      <li>Existing portfolio grows by one month's share return (e.g. 7%/12 = 0.583%)</li>
+      <li>Add $4,000 new investment</li>
+      <li>Result becomes the starting balance for next month</li>
+    </ol>
+    <p>Formula: <code>portfolio = portfolio × (1 + 0.07/12) + 4000</code>, repeated 360 times for 30 years. Both the original $800k AND every new $4k contribution compound for as long as they're in the portfolio.</p>
+    <p>Example for month 1: $800,000 × 1.00583 + $4,000 = <strong>$808,667</strong>. Month 2: $808,667 × 1.00583 + $4,000 = <strong>$817,381</strong>. And so on.</p>
+
+    <p><strong>Buy strategy — at start:</strong></p>
+    <ul class="clean">
+      <li>Pay deposit + stamp duty + costs upfront from the $800k portfolio</li>
+      <li>Take out the mortgage for the rest of the purchase</li>
+    </ul>
+    <p><strong>Buy strategy — each month:</strong></p>
+    <ol class="clean">
+      <li>Pay mortgage (split between interest and principal — principal builds equity, interest doesn't)</li>
+      <li>Pay ongoing costs (rates, insurance, pool, etc.) — growing with inflation</li>
+      <li>House value grows by one month's appreciation rate</li>
+      <li>Remaining portfolio grows by one month's share return, plus whatever new investing we add</li>
+    </ol>
+    <p><strong>Total wealth at any point</strong> = (current house value − remaining mortgage balance) + remaining portfolio.</p>
+  </div>
+</details>
 
 <div class="compare-grid" id="comparison-cards">
   <!-- Filled by JS -->
@@ -1025,6 +1081,10 @@ footer {
 
 <h3>What this tells us</h3>
 <div id="key-insight" class="callout">
+  <!-- Filled by JS -->
+</div>
+
+<div id="breakeven" class="callout" style="background:#fef3c7;border-left-color:#b45309;">
   <!-- Filled by JS -->
 </div>
 
@@ -1153,25 +1213,27 @@ update();
 
 // ============= RENT + INVEST vs BUY simulation =============
 
+// Each scenario is independent — no shared budget.
+// Compounding: portfolio = portfolio × (1 + r/12) + contribution, every month.
+// Both the existing balance AND each new contribution compound from the moment they're added.
+
 function simulateRent(years, params) {
-  const { investStart, totalBudgetStart, budgetGrowth, shareReturn, rentMonthly, rentGrowth } = params;
+  const { investStart, monthlyInvest, shareReturn, rentMonthly, rentGrowth } = params;
   const shareM = shareReturn / 12;
   const rentMGrowth = Math.pow(1 + rentGrowth, 1/12) - 1;
-  const budgetMGrowth = Math.pow(1 + budgetGrowth, 1/12) - 1;
 
   let portfolio = investStart;
   let currentRent = rentMonthly;
-  let currentBudget = totalBudgetStart;
   let totalRentPaid = 0;
   let totalInvested = 0;
 
   for (let m = 0; m < years * 12; m++) {
     totalRentPaid += currentRent;
-    const invest = Math.max(0, currentBudget - currentRent);
-    totalInvested += invest;
-    portfolio = (portfolio + invest) * (1 + shareM);
+    // Renter pays rent out of income (separate from investment budget).
+    // No council rates, insurance, maintenance — those are buyer-only costs.
+    portfolio = portfolio * (1 + shareM) + monthlyInvest;
+    totalInvested += monthlyInvest;
     currentRent *= (1 + rentMGrowth);
-    currentBudget *= (1 + budgetMGrowth);
   }
 
   return { portfolio, totalRentPaid, totalInvested, totalWealth: portfolio };
@@ -1180,7 +1242,7 @@ function simulateRent(years, params) {
 function simulateBuy(years, params) {
   const {
     investStart, upfrontCash, loanAmount, mortgagePayment, rate, n,
-    totalBudgetStart, budgetGrowth, shareReturn,
+    monthlyInvest, shareReturn,
     housePrice, houseGrowth, ongoingMonthly, ongoingGrowth
   } = params;
 
@@ -1188,19 +1250,18 @@ function simulateBuy(years, params) {
   const shareM = shareReturn / 12;
   const houseM = Math.pow(1 + houseGrowth, 1/12) - 1;
   const ongoingMGrowth = Math.pow(1 + ongoingGrowth, 1/12) - 1;
-  const budgetMGrowth = Math.pow(1 + budgetGrowth, 1/12) - 1;
 
   let portfolio = Math.max(0, investStart - upfrontCash);
   let balance = loanAmount;
   let house = housePrice;
   let currentOngoing = ongoingMonthly;
-  let currentBudget = totalBudgetStart;
   let totalInterest = 0;
   let totalMortgage = 0;
   let totalOngoing = 0;
   let totalInvested = 0;
 
   for (let m = 0; m < years * 12; m++) {
+    // Mortgage P&I
     let actualMortgage = 0;
     if (balance > 0) {
       const interest = balance * monthlyR;
@@ -1212,12 +1273,12 @@ function simulateBuy(years, params) {
     }
     totalMortgage += actualMortgage;
     totalOngoing += currentOngoing;
-    const available = Math.max(0, currentBudget - actualMortgage - currentOngoing);
-    totalInvested += available;
-    portfolio = (portfolio + available) * (1 + shareM);
+    // Whatever the buyer can still invest each month compounds.
+    portfolio = portfolio * (1 + shareM) + monthlyInvest;
+    totalInvested += monthlyInvest;
+    // House appreciates and ongoing costs creep up with inflation.
     house *= (1 + houseM);
     currentOngoing *= (1 + ongoingMGrowth);
-    currentBudget *= (1 + budgetMGrowth);
   }
 
   const equity = house - balance;
@@ -1234,7 +1295,7 @@ function fmtBig(n) {
   return '$' + Math.round(n);
 }
 
-function updateComparison() {
+function getComparisonInputs() {
   const price = +document.getElementById('price').value || 1250000;
   const depPct = +document.getElementById('deposit').value || 20;
   const rate = (+document.getElementById('rate').value || 6.5) / 100;
@@ -1242,16 +1303,15 @@ function updateComparison() {
 
   const investStart = +document.getElementById('cur-invest').value || 800000;
   const weeklyRent = +document.getElementById('cur-rent').value || 1000;
-  const monthlyInvestNow = +document.getElementById('cur-monthly-invest').value || 4000;
+  const monthlyInvestRent = +document.getElementById('cur-monthly-invest').value || 4000;
+  const monthlyInvestBuy = +document.getElementById('buy-monthly-invest').value || 0;
   const shareReturn = (+document.getElementById('share-return').value || 7) / 100;
   const houseGrowth = (+document.getElementById('house-growth').value || 5) / 100;
   const rentGrowth = (+document.getElementById('rent-growth').value || 3) / 100;
-  const budgetGrowth = 0.03;
+  const ongoingMonthly = +document.getElementById('buy-ongoing').value || 1000;
   const ongoingGrowth = 0.03;
-  const ongoingMonthly = 1000;
 
   const monthlyRent = weeklyRent * 52 / 12;
-  const totalBudgetStart = monthlyRent + monthlyInvestNow;
 
   const depositCash = price * depPct / 100;
   const needsLMI = depPct < 20;
@@ -1265,11 +1325,38 @@ function updateComparison() {
   const n = term * 12;
   const mortgagePayment = loanAmount * monthlyR * Math.pow(1+monthlyR, n) / (Math.pow(1+monthlyR, n) - 1);
 
-  const rentParams = { investStart, totalBudgetStart, budgetGrowth, shareReturn, rentMonthly: monthlyRent, rentGrowth };
+  return {
+    price, depPct, rate, term, n, monthlyR,
+    investStart, weeklyRent, monthlyRent,
+    monthlyInvestRent, monthlyInvestBuy,
+    shareReturn, houseGrowth, rentGrowth,
+    ongoingMonthly, ongoingGrowth,
+    depositCash, loanAmount, upfrontCash, mortgagePayment, stamp, fees
+  };
+}
+
+function updateComparison() {
+  const i = getComparisonInputs();
+
+  const rentParams = {
+    investStart: i.investStart,
+    monthlyInvest: i.monthlyInvestRent,
+    shareReturn: i.shareReturn,
+    rentMonthly: i.monthlyRent,
+    rentGrowth: i.rentGrowth
+  };
   const buyParams = {
-    investStart, upfrontCash, loanAmount, mortgagePayment, rate, n,
-    totalBudgetStart, budgetGrowth, shareReturn,
-    housePrice: price, houseGrowth, ongoingMonthly, ongoingGrowth
+    investStart: i.investStart,
+    upfrontCash: i.upfrontCash,
+    loanAmount: i.loanAmount,
+    mortgagePayment: i.mortgagePayment,
+    rate: i.rate, n: i.n,
+    monthlyInvest: i.monthlyInvestBuy,
+    shareReturn: i.shareReturn,
+    housePrice: i.price,
+    houseGrowth: i.houseGrowth,
+    ongoingMonthly: i.ongoingMonthly,
+    ongoingGrowth: i.ongoingGrowth
   };
 
   const horizons = [10, 20, 30];
@@ -1286,26 +1373,28 @@ function updateComparison() {
         ? `Rent + Invest wins by ${fmtBig(Math.abs(diff))}`
         : `Buying wins by ${fmtBig(Math.abs(diff))}`;
     const pillClass = tight ? 'verdict-pill tight' : 'verdict-pill';
+    const rentWinner = rentWins && !tight;
+    const buyWinner = !rentWins && !tight;
 
     return `
       <div class="horizon-card">
         <div class="horizon-label">After ${y} years</div>
         <div class="compare-row">
-          <div class="compare-side ${(!rentWins && !tight) ? '' : (rentWins && !tight ? 'winner' : '')}">
+          <div class="compare-side ${rentWinner ? 'winner' : ''}">
             <div class="side-label">Rent + Invest</div>
             <div class="wealth">${fmtBig(r.totalWealth)}</div>
             <div class="breakdown">
-              All shares: <span>${fmtBig(r.portfolio)}</span><br>
-              Rent paid: <span>${fmtBig(r.totalRentPaid)}</span><br>
-              House equity: <span>$0</span>
+              Shares: <span>${fmtBig(r.portfolio)}</span><br>
+              House equity: <span>$0</span><br>
+              Rent paid (cumulative): <span>${fmtBig(r.totalRentPaid)}</span>
             </div>
           </div>
-          <div class="compare-side ${(!rentWins && !tight) ? 'winner' : ''}">
+          <div class="compare-side ${buyWinner ? 'winner' : ''}">
             <div class="side-label">Buy this house</div>
             <div class="wealth">${fmtBig(b.totalWealth)}</div>
             <div class="breakdown">
               House equity: <span>${fmtBig(b.equity)}</span><br>
-              Shares left: <span>${fmtBig(b.portfolio)}</span><br>
+              Shares: <span>${fmtBig(b.portfolio)}</span><br>
               Interest paid: <span>${fmtBig(b.totalInterest)}</span>
             </div>
           </div>
@@ -1329,16 +1418,153 @@ function updateComparison() {
     <strong>With these assumptions:</strong> ${winner30} ends up ahead by about <strong>${fmtBig(Math.abs(diff30))}</strong> at year 30 — roughly <strong>${pct30.toFixed(0)}%</strong> more total wealth.<br><br>
     <strong>What's driving this:</strong>
     <ul style="margin:8px 0 0 0;padding-left:20px;">
-      <li>Buying gives us <strong>leverage</strong> — we control ${fmtBig(price)} of property with just our deposit, so any house price growth amplifies our returns.</li>
-      <li>But buying takes most of our monthly investing capacity. We go from $${monthlyInvestNow.toLocaleString()}/month into Vanguard to about ${fmtBig(Math.max(0, totalBudgetStart - mortgagePayment - ongoingMonthly))}/month.</li>
-      <li>Rent rises over time, but the mortgage stays nominally fixed. By year 20+, the renter is consuming most of their budget just on rent.</li>
-      <li>Try changing the share return up to 8% or the house growth down to 4% — you'll see how sensitive this is. Either side can win depending on what we assume.</li>
+      <li><strong>Compounding capacity matters most.</strong> The renter compounds $${i.monthlyInvestRent.toLocaleString()}/month + the $${(i.investStart/1000).toFixed(0)}k existing portfolio for 30 years at ${(i.shareReturn*100).toFixed(1)}%. The buyer compounds only $${i.monthlyInvestBuy.toLocaleString()}/month + a much smaller starting portfolio.</li>
+      <li><strong>Buying gives leverage.</strong> We control ${fmtBig(i.price)} of property with our deposit, so house growth amplifies our returns — but only at the assumed ${(i.houseGrowth*100).toFixed(1)}% house growth.</li>
+      <li><strong>Tipping point:</strong> if share returns drop to 5% or house growth rises to 7%, buying tends to win. With our defaults (shares 7%, house 5%), renting+investing usually wins on pure wealth.</li>
     </ul>
+  `;
+
+  // Breakeven rent calc
+  updateBreakeven(i, rentParams, buyParams);
+}
+
+// --- Breakeven rent: at what STARTING weekly rent are the two strategies wealth-equal at year 30?
+//
+// Model used here (called "tight budget" — most realistic for a household whose income
+// roughly tracks inflation but doesn't outpace it):
+//   - Renter's total monthly cash for HOUSING + INVESTING is fixed at (current_rent + $4k).
+//   - As rent grows over time, the amount left to invest shrinks.
+//   - When rent eats the whole budget, monthly investing stops.
+//   - Existing $800k portfolio always compounds at the share return.
+// Then we numerically search for the starting weekly rent at which renter's wealth = buyer's wealth at year 30.
+
+function renterWealthTightBudget(years, params, startingWeeklyRent) {
+  const { investStart, monthlyInvestRent, shareReturn, rentGrowth } = params;
+  const monthlyRent = startingWeeklyRent * 52 / 12;
+  const fixedBudget = monthlyRent + monthlyInvestRent;  // never grows in this model
+  const shareM = shareReturn / 12;
+  const rentMGrowth = Math.pow(1 + rentGrowth, 1/12) - 1;
+  let portfolio = investStart;
+  let currentRent = monthlyRent;
+  for (let m = 0; m < years * 12; m++) {
+    const invest = Math.max(0, fixedBudget - currentRent);
+    portfolio = portfolio * (1 + shareM) + invest;
+    currentRent *= (1 + rentMGrowth);
+  }
+  return portfolio;
+}
+
+function updateBreakeven(i, rentParams, buyParams) {
+  const buyerWealth30 = simulateBuy(30, buyParams).totalWealth;
+
+  // Pure cash-flow equivalent: rent that matches mortgage + ongoing per month
+  const buyMonthlyHousing = i.mortgagePayment + i.ongoingMonthly;
+  const cashFlowWeekly = buyMonthlyHousing * 12 / 52;
+
+  // Wealth-equivalent (tight budget) — bisection on starting weekly rent
+  const breakevenParams = {
+    investStart: i.investStart,
+    monthlyInvestRent: i.monthlyInvestRent,
+    shareReturn: i.shareReturn,
+    rentGrowth: i.rentGrowth
+  };
+
+  // Check: if even at $0 rent the renter loses, no breakeven (buying beats every rent)
+  const renterAtZero = renterWealthTightBudget(30, breakevenParams, 0);
+  let breakevenWeekly = null;
+  let noBreakeven = false;
+  if (renterAtZero < buyerWealth30) {
+    noBreakeven = true; // buyer beats renter at any rent (unlikely)
+  } else {
+    let lo = 0, hi = 20000;
+    // Check if upper bound is also a renter-wins case (e.g., rent_growth = budget_growth)
+    const renterAtHi = renterWealthTightBudget(30, breakevenParams, hi);
+    if (renterAtHi > buyerWealth30) {
+      breakevenWeekly = Infinity; // renter wins at any plausible rent
+    } else {
+      for (let iter = 0; iter < 60; iter++) {
+        const mid = (lo + hi) / 2;
+        const rw = renterWealthTightBudget(30, breakevenParams, mid);
+        if (rw > buyerWealth30) lo = mid;
+        else hi = mid;
+      }
+      breakevenWeekly = (lo + hi) / 2;
+    }
+  }
+
+  // Renter wealth at current rent for context
+  const renterAtCurrent = renterWealthTightBudget(30, breakevenParams, i.weeklyRent);
+  const currentDiff = renterAtCurrent - buyerWealth30;
+
+  // Total lifetime housing comparison
+  const totalRentOver30 = (() => {
+    let total = 0;
+    let r = i.monthlyRent;
+    const g = Math.pow(1 + i.rentGrowth, 1/12) - 1;
+    for (let m = 0; m < 360; m++) { total += r; r *= (1 + g); }
+    return total;
+  })();
+  const totalMortgageOver30 = i.mortgagePayment * Math.min(i.n, 360);
+  const totalOngoingOver30 = (() => {
+    let total = 0;
+    let o = i.ongoingMonthly;
+    const g = Math.pow(1 + i.ongoingGrowth, 1/12) - 1;
+    for (let m = 0; m < 360; m++) { total += o; o *= (1 + g); }
+    return total;
+  })();
+  const totalBuyOutflow = i.upfrontCash + totalMortgageOver30 + totalOngoingOver30;
+  const houseValueAt30 = i.price * Math.pow(1 + i.houseGrowth, 30);
+
+  // Format the wealth-equivalent value
+  let wealthEqText, wealthEqContext;
+  if (noBreakeven) {
+    wealthEqText = 'Always buy';
+    wealthEqContext = 'Under these assumptions, buying beats renting+investing at any rent level.';
+  } else if (breakevenWeekly === Infinity || breakevenWeekly > 15000) {
+    wealthEqText = 'No realistic limit';
+    wealthEqContext = 'Under these assumptions (especially if income keeps pace with rent), renting+investing wins at any plausible rent — the $800k existing portfolio plus $4k/month compounding always pulls ahead.';
+  } else {
+    wealthEqText = '$' + Math.round(breakevenWeekly).toLocaleString() + ' / week';
+    wealthEqContext = `Below this rent, renting+investing produces more wealth at year 30. Above this rent, buying produces more wealth.`;
+  }
+
+  const positionText = (breakevenWeekly && breakevenWeekly !== Infinity && breakevenWeekly < 15000)
+    ? (i.weeklyRent < breakevenWeekly
+        ? `We're paying <strong>$${i.weeklyRent.toLocaleString()}/wk</strong> — that's <strong>$${Math.round(breakevenWeekly - i.weeklyRent).toLocaleString()}/wk below</strong> the wealth-equivalent rent. Under this model, renting + investing wins at our current rent.`
+        : `We're paying <strong>$${i.weeklyRent.toLocaleString()}/wk</strong> — that's <strong>$${Math.round(i.weeklyRent - breakevenWeekly).toLocaleString()}/wk above</strong> the wealth-equivalent rent. Under this model, buying is the financially smarter call now.`)
+    : `We're paying <strong>$${i.weeklyRent.toLocaleString()}/wk</strong>. Renting + investing wins by <strong>${fmtBig(Math.abs(currentDiff))}</strong> at year 30.`;
+
+  const breakevenEl = document.getElementById('breakeven');
+  breakevenEl.innerHTML = `
+    <h4 style="margin-top:0;">The maximum rent that "breaks even" with buying</h4>
+    <p>There are two honest ways to answer this. Each makes a different assumption — both are useful:</p>
+
+    <div style="display:grid;grid-template-columns:1fr;gap:14px;margin:14px 0;">
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px 16px;">
+        <div style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;font-weight:700;margin-bottom:6px;">1. Same monthly cash outflow</div>
+        <div style="font-size:26px;font-weight:700;color:var(--accent);">$${Math.round(cashFlowWeekly).toLocaleString()} / week</div>
+        <div style="font-size:13px;color:var(--muted);margin-top:6px;line-height:1.55;">If rent rose above this, our monthly cash outflow renting would exceed the monthly cost of owning (mortgage <strong>${fmtBig(i.mortgagePayment)}</strong> + ongoing <strong>${fmtBig(i.ongoingMonthly)}</strong> = <strong>${fmtBig(buyMonthlyHousing)}</strong>/month). This is the simplest comparison — but it ignores that owning builds equity.</div>
+      </div>
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px 16px;">
+        <div style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;font-weight:700;margin-bottom:6px;">2. Same total wealth at year 30 — "tight budget" model</div>
+        <div style="font-size:26px;font-weight:700;color:var(--accent);">${wealthEqText}</div>
+        <div style="font-size:13px;color:var(--muted);margin-top:6px;line-height:1.55;">${wealthEqContext}<br><br><strong>Assumption:</strong> our total monthly cash for housing + investing is fixed at <strong>${fmtBig(i.monthlyRent + i.monthlyInvestRent)}</strong> (current rent + current $4k invest). As rent rises over the years, the amount left for investing shrinks — eventually to zero. This is realistic if our take-home pay doesn't keep up with rent inflation.</div>
+      </div>
+    </div>
+
+    <p style="margin-top:14px;">${positionText}</p>
+
+    <p style="font-size:13px;color:var(--muted);margin-top:14px;line-height:1.6;">
+      <strong>Total housing outflow over 30 years:</strong><br>
+      • Renting at our current $${i.weeklyRent}/wk (growing ${(i.rentGrowth*100).toFixed(1)}%/yr) → <strong>${fmtBig(totalRentOver30)}</strong> spent on rent, $0 asset at end.<br>
+      • Buying at ${fmtBig(i.price)} → <strong>${fmtBig(totalBuyOutflow)}</strong> spent (upfront ${fmtBig(i.upfrontCash)} + 30 years of mortgage ${fmtBig(totalMortgageOver30)} + ongoing ${fmtBig(totalOngoingOver30)}). But we own a house worth ~<strong>${fmtBig(houseValueAt30)}</strong> at the end (capital-gains-tax free as primary residence).
+    </p>
   `;
 }
 
-['cur-invest','cur-rent','cur-monthly-invest','share-return','house-growth','rent-growth'].forEach(id => {
-  document.getElementById(id).addEventListener('input', updateComparison);
+['cur-invest','cur-rent','cur-monthly-invest','buy-monthly-invest','share-return','house-growth','rent-growth','buy-ongoing'].forEach(id => {
+  const el = document.getElementById(id);
+  if (el) el.addEventListener('input', updateComparison);
 });
 updateComparison();
 </script>
